@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#05080f"><meta name="description" content="MOHAMED EMAAD / MOO — Graphic Designer & Web Designer."><title>MOHAMED EMAAD | MOO — مصمم جرافيك ومواقع</title><style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#05080f;--panel:#0b1220;--panel2:#0e192b;--text:#edf5ff;--muted:#9eacc2;--blue:#168bff;--cyan:#31d7ff;--line:rgba(91,166,255,.2);--glow:0 0 35px rgba(22,139,255,.16);--radius:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{background:radial-gradient(ellipse at 80% 0%,rgba(0,100,255,.12),transparent 34%),var(--bg);color:var(--text);font-family:'Cairo','Inter',sans-serif;line-height:1.7;min-height:100vh;overflow-x:hidden}
+body[lang="en"]{font-family:'Inter','Cairo',sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button,a,.project-card,.service-card,.skill-card{transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease}
+a:hover,.hover-lift:hover{transform:translateY(-3px)}
+.container{width:min(1140px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(5,8,15,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(91,166,255,.12)}
+.navbar{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1px;font-family:'Inter',sans-serif}
+.logo{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;color:white;font-size:18px;font-weight:900;background:linear-gradient(135deg,#168bff,#003b93);box-shadow:0 0 25px rgba(22,139,255,.3);border:1px solid rgba(255,255,255,.2)}
+.brand span small{display:block;font-size:10px;letter-spacing:3px;color:var(--muted);font-weight:600}
+.navlinks{display:flex;align-items:center;gap:23px;color:#c2d0e3;font-size:14px}
+.navlinks a{position:relative}
+.navlinks a:hover,.navlinks a.active{color:var(--cyan)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.lang-btn,.menu-btn{background:#0d1727;color:var(--text);border:1px solid var(--line);padding:9px 13px;border-radius:12px;cursor:pointer}
+.menu-btn{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;padding:12px 20px;border-radius:13px;font-weight:800;cursor:pointer}
+.btn-primary{background:linear-gradient(120deg,#168bff,#0758ca);color:white;box-shadow:0 10px 30px rgba(22,139,255,.18)}
+.btn-primary:hover{box-shadow:0 10px 38px rgba(22,139,255,.32);transform:translateY(-3px)}
+.btn-outline{border-color:var(--line);background:rgba(12,24,42,.7);color:#dcecff}
+.btn-outline:hover{border-color:var(--cyan);background:#0b1c32}
+main{min-height:68vh}
+.hero{padding:92px 0 76px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 13px;border:1px solid var(--line);background:rgba(14,31,53,.65);border-radius:100px;color:#b9ddff;font-size:13px;margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:#39e5a6;box-shadow:0 0 12px #39e5a6}
+h1{font-size:clamp(2.6rem,6vw,5.1rem);line-height:1.1;letter-spacing:-2px;margin-bottom:22px;font-weight:900}
+.gradient-text{background:linear-gradient(100deg,#fff 10%,#51b8ff 52%,#4ee7ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:28px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px}
+.hero-visual{min-height:410px;display:grid;place-items:center;position:relative}
+.orbit{width:min(390px,85vw);aspect-ratio:1;border-radius:50%;border:1px solid rgba(49,215,255,.22);display:grid;place-items:center;position:relative;background:radial-gradient(circle,rgba(22,139,255,.14),rgba(5,8,15,.15) 60%,transparent 70%);box-shadow:inset 0 0 80px rgba(22,139,255,.07)}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:9%;border:1px dashed rgba(49,215,255,.28);border-radius:50%;animation:spin 28s linear infinite}
+.orbit:after{inset:19%;border-style:solid;border-color:rgba(22,139,255,.22);animation-direction:reverse;animation-duration:20s}
+.moo-mark{font-family:Inter,sans-serif;font-size:clamp(5rem,12vw,8rem);font-weight:900;letter-spacing:-12px;color:#fff;text-shadow:0 0 25px rgba(49,215,255,.5),0 0 75px rgba(22,139,255,.4);z-index:1;animation:float 4s ease-in-out infinite}
+.float-tag{position:absolute;background:#0d192a;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:12px;color:#d6e9ff;box-shadow:var(--glow);z-index:2}
+.tag-one{top:15%;right:0}.tag-two{bottom:17%;left:0}.tag-three{bottom:3%;right:15%}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-9px)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:42px;max-width:590px}
+.stat{padding:15px 18px;border:1px solid var(--line);border-radius:16px;background:rgba(10,18,31,.65)}
+.stat strong{font-size:24px;display:block;color:var(--cyan)}.stat span{font-size:12px;color:var(--muted)}
+.section{padding:66px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.25;margin:6px 0 8px}
+.section-sub{color:var(--muted);max-width:650px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:linear-gradient(145deg,rgba(14,25,43,.95),rgba(8,14,25,.92));border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:var(--glow)}
+.card:hover{transform:translateY(-6px);border-color:rgba(49,215,255,.5);box-shadow:0 20px 45px rgba(0,0,0,.2),0 0 30px rgba(22,139,255,.1)}
+.card-icon{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:rgba(22,139,255,.13);border:1px solid rgba(49,215,255,.18);font-size:23px;margin-bottom:17px}
+.card h3{font-size:19px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-size:11px;padding:5px 10px;border-radius:100px;border:1px solid var(--line);color:#c7e3ff;background:rgba(22,139,255,.07)}
+.project-card{overflow:hidden;padding:0}
+.project-image{height:210px;background:#0d1726;overflow:hidden}
+.project-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.project-card:hover .project-image img{transform:scale(1.06)}
+.project-content{padding:22px}
+.project-content p{margin-top:6px}
+.page-hero{padding:68px 0 35px}
+.page-hero .lead{margin-bottom:0}
+.about-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px;align-items:stretch}
+.profile-panel{min-height:300px;display:grid;place-items:center;position:relative;overflow:hidden}
+.profile-panel .big-moo{font:900 110px Inter,sans-serif;letter-spacing:-14px;color:#fff;text-shadow:0 0 40px rgba(49,215,255,.45)}
+.profile-panel:before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;border:1px solid rgba(49,215,255,.25);box-shadow:0 0 100px rgba(22,139,255,.12)}
+.skill-list{display:grid;gap:15px;margin-top:20px}
+.skill-row{display:grid;grid-template-columns:130px 1fr 40px;gap:12px;align-items:center;font-size:13px}
+.progress{height:7px;background:#172438;border-radius:20px;overflow:hidden}.progress span{height:100%;display:block;background:linear-gradient(90deg,#168bff,#31d7ff);border-radius:20px}
+.timeline{border-inline-start:1px solid var(--line);padding-inline-start:22px;display:grid;gap:20px}
+.timeline-item{position:relative}.timeline-item:before{content:"";position:absolute;inset-inline-start:-28px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--blue)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px}
+.contact-method{display:flex;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.contact-method:last-child{border:0}.contact-method .card-icon{margin:0;flex-shrink:0}
+form{display:grid;gap:14px}
+label{display:grid;gap:7px;font-size:13px;color:#c4d6ed}
+input,textarea,select{width:100%;background:#070e19;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:13px 14px;outline:none}
+input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(49,215,255,.08)}
+textarea{min-height:125px;resize:vertical}
+.notice{color:var(--muted);font-size:12px}
+.cta{padding:35px;background:linear-gradient(110deg,rgba(22,139,255,.16),rgba(49,215,255,.04));border:1px solid var(--line);border-radius:var(--radius);display:flex;justify-content:space-between;align-items:center;gap:25px}
+footer{margin-top:50px;border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.socials{display:flex;gap:12px;flex-wrap:wrap}.socials a{padding:7px 11px;border:1px solid var(--line);border-radius:10px}
+.reveal{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){.hero-grid,.about-layout,.contact-grid{grid-template-columns:1fr}.hero{padding-top:55px}.hero-visual{min-height:340px}.grid-3{grid-template-columns:repeat(2,1fr)}.navlinks{display:none;position:absolute;top:78px;inset-inline:0;background:#07101d;border-bottom:1px solid var(--line);padding:20px 4%;flex-direction:column;align-items:stretch;gap:14px}.navlinks.open{display:flex}.menu-btn{display:block}.section-head{align-items:start;flex-direction:column}.cta{align-items:start;flex-direction:column}}
+@media(max-width:560px){.grid-3,.grid-2{grid-template-columns:1fr}.navbar{min-height:70px}.navlinks{top:70px}.brand span{font-size:13px}.hero{padding:45px 0}.hero-visual{min-height:300px}.orbit{width:280px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.stat span{font-size:10px}.card{padding:21px}.skill-row{grid-template-columns:95px 1fr 32px;gap:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+#project-form-section[hidden]{display:none}
+
+/* Day / Night theme switch */
+:root {
+  color-scheme: dark;
+  --theme-page: #080d18;
+  --theme-panel: #101827;
+  --theme-text: #eef4ff;
+  --theme-muted: #a8b5c9;
+  --theme-border: rgba(148, 163, 184, .24);
+}
+html[data-theme="light"] {
+  color-scheme: light;
+  --theme-page: #f7f9fc;
+  --theme-panel: #ffffff;
+  --theme-text: #172033;
+  --theme-muted: #526078;
+  --theme-border: rgba(71, 85, 105, .22);
+}
+body {
+  background-color: var(--theme-page);
+  color: var(--theme-text);
+  transition: background-color .25s ease, color .25s ease;
+}
+html[data-theme="light"] body {
+  background-image: none !important;
+}
+html[data-theme="light"] .card,
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .service-card,
+html[data-theme="light"] .testimonial-card,
+html[data-theme="light"] .contact-card,
+html[data-theme="light"] .form-card,
+html[data-theme="light"] .glass,
+html[data-theme="light"] .panel,
+html[data-theme="light"] .box {
+  background: var(--theme-panel) !important;
+  color: var(--theme-text) !important;
+  border-color: var(--theme-border) !important;
+}
+html[data-theme="light"] p,
+html[data-theme="light"] li,
+html[data-theme="light"] label,
+html[data-theme="light"] .section-sub,
+html[data-theme="light"] .muted {
+  color: var(--theme-muted);
+}
+#theme-toggle {
+  position: fixed;
+  z-index: 9999;
+  top: 18px;
+  left: 18px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--theme-border);
+  border-radius: 50%;
+  background: var(--theme-panel);
+  color: var(--theme-text);
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform .2s ease, background-color .25s ease, color .25s ease;
+}
+#theme-toggle:hover { transform: translateY(-2px); }
+#theme-toggle:focus-visible { outline: 3px solid #38bdf8; outline-offset: 3px; }
+@media (max-width: 600px) {
+  #theme-toggle { top: 12px; left: 12px; width: 42px; height: 42px; }
+}
+
+</style></head>
+<body data-page="home">
+<button id="theme-toggle" type="button" aria-label="تفعيل الوضع النهاري" title="تفعيل الوضع النهاري">☀️</button>
+
+<header><div class="container navbar">
+ <a class="brand" href="index.html" aria-label="MOO home"><span class="logo">MOO</span><span>MOHAMED EMAAD<small>DESIGNER / CREATIVE</small></span></a>
+ <nav class="navlinks">
+  <a href="index.html" data-i18n="navHome">الرئيسية</a><a href="about.html" data-i18n="navAbout">من أنا</a><a href="services.html" data-i18n="navServices">الخدمات</a><a href="portfolio.html" data-i18n="navWork">أعمالي</a><a href="contact.html" data-i18n="navContact">تواصل معي</a>
+ </nav>
+ <div class="nav-actions"><button class="lang-btn" type="button" aria-label="Switch language">EN</button><button class="menu-btn" type="button" aria-label="Open menu">☰</button></div>
+</div></header>
+<main>
+<section class="hero"><div class="container hero-grid">
+ <div class="reveal"><div class="eyebrow"><span class="dot"></span><span data-i18n="available">متاح لمشاريع جديدة</span></div>
+ <h1><span data-i18n="heroLine1">أحوّل أفكارك إلى</span><br><span class="gradient-text" data-i18n="heroLine2">تجارب رقمية مميزة.</span></h1>
+ <p class="lead" data-i18n="heroText">أنا محمد عماد، مصمم جرافيك ومواقع. أساعد العلامات التجارية على الظهور بهوية قوية ومواقع عصرية تجمع بين الجمال وسهولة الاستخدام.</p>
+ <div class="hero-buttons"><a class="btn btn-primary" href="#all-work" data-i18n="viewWork">شاهد أعمالي ↗</a><a class="btn btn-outline" href="https://wa.me/201142460251" target="_blank" rel="noopener" data-i18n="contactMe">خلينا نتكلم</a></div>
+ <div class="stats"><div class="stat"><strong>02+</strong><span data-i18n="stat1">مجالات إبداعية</span></div><div class="stat"><strong>100%</strong><span data-i18n="stat2">اهتمام بالتفاصيل</span></div><div class="stat"><strong>∞</strong><span data-i18n="stat3">هدف واحد: التميّز</span></div></div></div>
+ <div class="hero-visual reveal"><div class="orbit"><div class="moo-mark">MOO</div><div class="float-tag tag-one">✦ Graphic Design</div><div class="float-tag tag-two">⌘ Web Design</div><div class="float-tag tag-three">UI / UX</div></div></div>
+</div></section>
+<section class="section" id="all-work"><div class="container"><div class="section-head reveal"><div><div class="kicker" data-i18n="servicesKicker">ماذا أقدّم</div><h2 data-i18n="servicesTitle">خدمات مصممة لتبرز علامتك</h2><p class="section-sub" data-i18n="servicesText">من الفكرة الأولى إلى اللمسة الأخيرة، أركز على تصميم واضح، متناسق، ويخدم أهدافك.</p></div><a class="btn btn-outline" href="#all-work" data-i18n="moreWork">كل الخدمات ↗</a></div>
+ <div class="grid-3"><article class="card reveal"><div class="card-icon">✳</div><h3 data-i18n="graphicTitle">تصميم جرافيك</h3><p data-i18n="graphicText">تصميمات بصرية متناسقة للسوشيال ميديا والإعلانات والهوية التجارية.</p><div class="chips"><span class="chip">Social Media</span><span class="chip">Ads</span></div></article>
+ <article class="card reveal"><div class="card-icon">⌘</div><h3 data-i18n="webTitle">تصميم وتطوير المواقع</h3><p data-i18n="webText">مواقع متجاوبة وسريعة بتجربة استخدام واضحة ومظهر احترافي.</p><div class="chips"><span class="chip">HTML / CSS</span><span class="chip">Responsive</span></div></article>
+ <article class="card reveal"><div class="card-icon">◈</div><h3 data-i18n="brandTitle">هوية بصرية</h3><p data-i18n="brandText">بناء شكل بصري متكامل يساعد مشروعك على أن يكون معروفًا ومتناسقًا.</p><div class="chips"><span class="chip">Logo</span><span class="chip">Branding</span></div></article></div></div></section>
+<section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker" data-i18n="workKicker">مختارات من الأعمال</div><h2 data-i18n="workTitle">أفكار تتحول إلى تصميم</h2><p class="section-sub" data-i18n="workText">نماذج استعراضية توضح أنواع المشاريع التي يمكن عرضها هنا.</p></div><a class="btn btn-outline" href="#all-work" data-i18n="moreWork">كل الأعمال ↗</a></div>
+ <div class="grid-3">
+ <article class="card project-card reveal"><div class="project-image"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%230b1530'/%3E%3Cstop offset='1' stop-color='%23168bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='500' fill='url(%23g)'/%3E%3Ccircle cx='690' cy='140' r='120' fill='%2331d7ff' opacity='.18'/%3E%3Crect x='210' y='95' width='480' height='310' rx='28' fill='%2305080f' stroke='%2331d7ff' stroke-width='3'/%3E%3Ctext x='450' y='250' fill='white' font-size='86' font-family='Arial' font-weight='bold' text-anchor='middle'%3EMOO%3C/text%3E%3Ctext x='450' y='300' fill='%2331d7ff' font-size='25' font-family='Arial' text-anchor='middle'%3EBRAND IDENTITY%3C/text%3E%3C/svg%3E" alt="Brand identity design concept"></div><div class="project-content"><h3 data-i18n="project1">هوية علامة تجارية</h3><p data-i18n="project1Text">تصور بصري لعلامة عصرية بألوان قوية وتفاصيل نظيفة.</p></div></article>
+ <article class="card project-card reveal"><div class="project-image"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23050b18'/%3E%3Cstop offset='1' stop-color='%230b5dbb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='500' fill='url(%23g)'/%3E%3Crect x='175' y='55' width='550' height='390' rx='24' fill='%230a1424' stroke='%2331d7ff' stroke-width='3'/%3E%3Crect x='205' y='90' width='490' height='45' rx='10' fill='%23168bff' opacity='.8'/%3E%3Crect x='205' y='160' width='210' height='230' rx='14' fill='%23142b49'/%3E%3Crect x='435' y='160' width='260' height='95' rx='14' fill='%23142b49'/%3E%3Crect x='435' y='275' width='260' height='115' rx='14' fill='%23142b49'/%3E%3Ctext x='450' y='220' fill='white' font-size='36' font-family='Arial' font-weight='bold' text-anchor='middle'%3EWEB UI%3C/text%3E%3C/svg%3E" alt="Website analytics and web design concept"></div><div class="project-content"><h3 data-i18n="project2">واجهة موقع إبداعي</h3><p data-i18n="project2Text">واجهة ويب داكنة بتباين واضح وتفاصيل تفاعلية.</p></div></article>
+ <article class="card project-card reveal"><div class="project-image"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23120b2c'/%3E%3Cstop offset='1' stop-color='%230b7b9f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='500' fill='url(%23g)'/%3E%3Crect x='100' y='65' width='700' height='370' rx='25' fill='%2305080f' opacity='.8' stroke='%2331d7ff' stroke-width='2'/%3E%3Ccircle cx='270' cy='250' r='95' fill='%23168bff'/%3E%3Ccircle cx='450' cy='250' r='95' fill='%2331d7ff' opacity='.85'/%3E%3Ccircle cx='630' cy='250' r='95' fill='%23ffffff' opacity='.85'/%3E%3Ctext x='450' y='410' fill='white' font-size='28' font-family='Arial' text-anchor='middle'%3ESOCIAL MEDIA DESIGN%3C/text%3E%3C/svg%3E" alt="Graphic design campaign"></div><div class="project-content"><h3 data-i18n="project3">حملة سوشيال ميديا</h3><p data-i18n="project3Text">مجموعة تصميمات إعلانية مترابطة لحضور رقمي متناسق.</p></div></article>
+ </div></div></section>
+
+<section class="section" id="project-form-section" hidden>
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">ابدأ مشروعك</div><h2>احكي لي عن فكرتك</h2><p class="section-sub">اكتب بياناتك وتفاصيل المشروع، وسيتم تجهيز رسالة وإرسالها عبر واتساب على الرقم 01142460251.</p></div></div>
+  <div class="card">
+   <form id="project-brief-form">
+    <label>الاسم<input name="clientName" type="text" placeholder="اكتب اسمك" required></label>
+    <label>رقم الموبايل<input name="clientPhone" type="tel" inputmode="tel" placeholder="اكتب رقم موبايلك" required></label>
+    <label>المشروع اللي عاوز تعمله<select name="projectType" required><option value="">اختار نوع المشروع</option><option>تصميم جرافيك</option><option>تصميم لوجو وهوية بصرية</option><option>تصميم وتطوير موقع</option><option>تصميمات سوشيال ميديا</option><option>مشروع آخر</option></select></label>
+    <label>تفاصيل المشروع<textarea name="projectDetails" placeholder="اكتب تفاصيل فكرتك هنا..." required></textarea></label>
+    <button class="btn btn-primary" type="submit">إرسال الطلب عبر واتساب ↗</button>
+    <p class="notice">عند الضغط على إرسال، هيفتح واتساب برسالة جاهزة تقدر تراجعها وتبعتها.</p>
+   </form>
+  </div>
+ </div>
+</section>
+<section class="section" id="testimonials-section">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">كلام يفرّحني</div><h2>آراء وانطباعات العملاء</h2><p class="section-sub">آراء وانطباعات العملاء عن التصميمات والبرمجة والأداء المميز.</p></div></div>
+  <div class="card reveal" id="testimonial-card" aria-live="polite" style="text-align:center;min-height:190px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px">
+   <div style="font-size:30px;color:var(--cyan)">“</div>
+   <p id="testimonial-text" style="font-size:18px;max-width:760px;color:var(--cyan)">بجد شكرًا للمهندس على شغله وتصميماته الجميلة، ما شاء الله تسلم إيدك.</p>
+   <strong id="testimonial-name" style="color:var(--blue);font-size:20px">محمود علي</strong>
+   <span id="testimonial-location" class="notice">القاهرة</span>
+  </div>
+ </div>
+</section>
+
+<section class="section"><div class="container"><div class="cta reveal"><div><h2 data-i18n="ctaTitle">عندك فكرة مشروع؟</h2><p class="section-sub" data-i18n="ctaText">خلينا نحول فكرتك إلى تجربة احترافية تناسب علامتك التجارية.</p></div><button class="btn btn-primary" id="show-project-form" type="button" data-i18n="startProject">ابدأ مشروعك ↗</button></div></div></section>
+</main>
+<footer><div class="container footer-row">
+ <div>© <span id="year"></span> MOHAMED EMAAD / MOO. <span data-i18n="footerRights">جميع الحقوق محفوظة.</span> <span data-i18n="footerText">تصميم وتطوير</span> <strong>MOHAMED EMAAD</strong></div>
+ <div class="socials"><a href="https://wa.me/201142460251" target="_blank" rel="noopener">WhatsApp: 01142460251 ↗</a><a href="https://tiktok.com/@mo7amed.166" target="_blank" rel="noopener">TikTok ↗</a><a href="https://www.facebook.com/share/1FEmxtQFLX/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.instagram.com/mohamed.emad.29?stkn=MXducWoyZGV1anJkbA==" target="_blank" rel="noopener">Instagram ↗</a></div>
+</div></footer><script>document.getElementById('year').textContent=new Date().getFullYear()</script><script>
+
+const I18N = {
+ ar:{
+  navHome:"الرئيسية",navAbout:"من أنا",navServices:"الخدمات",navWork:"أعمالي",navContact:"تواصل معي",
+  available:"متاح لمشاريع جديدة",heroLine1:"أحوّل أفكارك إلى",heroLine2:"تجارب رقمية مميزة.",heroText:"أنا محمد عماد، مصمم جرافيك ومواقع. أساعد العلامات التجارية على الظهور بهوية قوية ومواقع عصرية تجمع بين الجمال وسهولة الاستخدام.",
+  viewWork:"شاهد أعمالي",contactMe:"خلينا نتكلم",stat1:"مجالات إبداعية",stat2:"اهتمام بالتفاصيل",stat3:"هدف واحد: التميّز",
+  servicesKicker:"ماذا أقدّم",servicesTitle:"خدمات مصممة لتبرز علامتك",servicesText:"من الفكرة الأولى إلى اللمسة الأخيرة، أركز على تصميم واضح، متناسق، ويخدم أهدافك.",
+  graphicTitle:"تصميم جرافيك",graphicText:"تصميمات بصرية متناسقة للسوشيال ميديا والإعلانات والهوية التجارية، بألوان وتفاصيل تناسب شخصيتك.",
+  webTitle:"تصميم وتطوير المواقع",webText:"مواقع متجاوبة وسريعة بتجربة استخدام واضحة، ومظهر احترافي على الموبايل والكمبيوتر.",
+  brandTitle:"هوية بصرية",brandText:"بناء شكل بصري متكامل يساعد مشروعك على أن يكون معروفًا ومتناسقًا في كل نقطة تواصل.",
+  workKicker:"مختارات من الأعمال",workTitle:"أفكار تتحول إلى تصميم",workText:"نماذج استعراضية توضح أنواع المشاريع التي يمكن عرضها هنا. استبدلها بأعمالك الحقيقية عند التجهيز للنشر.",
+  project1:"هوية علامة تجارية",project1Text:"تصور بصري لعلامة عصرية بألوان قوية وتفاصيل نظيفة.",project2:"واجهة موقع إبداعي",project2Text:"واجهة ويب داكنة بتباين واضح وتفاصيل تفاعلية.",project3:"حملة سوشيال ميديا",project3Text:"مجموعة تصميمات إعلانية مترابطة لحضور رقمي متناسق.",
+  moreWork:"كل الأعمال",ctaTitle:"عندك فكرة مشروع؟",ctaText:"خلينا نحول فكرتك إلى تجربة احترافية تناسب علامتك التجارية.",startProject:"ابدأ مشروعك",
+  aboutKicker:"نبذة عني",aboutTitle:"مصمم يهتم بالفكرة والتفاصيل",aboutText:"أجمع بين التفكير الإبداعي والاهتمام بالتفاصيل لصناعة تصميمات ومواقع تساعد المشاريع على تقديم نفسها بثقة. هدفي أن يكون كل مشروع واضحًا، جذابًا، وسهل الاستخدام.",
+  aboutCardTitle:"مرحبًا، أنا محمد عماد",aboutCardText:"Graphic Designer • Web Designer. أعمل على تصميم هويات بصرية وواجهات مواقع تجمع بين الشكل العصري والوظيفة العملية. هذه المساحة مخصصة لعرض خبراتي وطريقة عملي.",
+  skillsTitle:"مهاراتي",skill1:"تصميم جرافيك",skill2:"تصميم مواقع",skill3:"UI / UX",skill4:"هوية بصرية",processTitle:"طريقة عملي",step1:"نفهم الفكرة",step1Text:"نحدد هدف المشروع والجمهور والشكل المناسب.",step2:"نصمم ونطوّر",step2Text:"نحوّل الفكرة إلى تصميم واضح ومتناسق.",step3:"نراجع ونسلّم",step3Text:"نراجع التفاصيل ونجهز الملفات أو الموقع للنشر.",
+  servicesPageTitle:"خدماتي",servicesPageText:"حلول تصميم مرنة تساعدك على بناء حضور رقمي واضح ومميز.",serviceDetail1:"تصميمات السوشيال ميديا",serviceDetail1Text:"بوستات وإعلانات وبنرات متناسقة مع هوية مشروعك.",serviceDetail2:"تصميم الشعارات",serviceDetail2Text:"شعارات مميزة قابلة للاستخدام عبر المنصات المختلفة.",serviceDetail3:"مواقع شخصية وتجارية",serviceDetail3Text:"صفحات متعددة أو صفحة هبوط، بتصميم متجاوب وتجربة استخدام مريحة.",serviceDetail4:"تحسين الواجهة وتجربة الاستخدام",serviceDetail4Text:"تنظيم المحتوى والأقسام والأزرار لتكون تجربة الزائر أوضح وأسهل.",
+  portfolioTitle:"معرض الأعمال",portfolioText:"استكشف نماذج من الاتجاهات الإبداعية التي يمكن تنفيذها لمشروعك.",filterAll:"الكل",filterGraphic:"جرافيك",filterWeb:"مواقع",contactTitle:"خلينا نبدأ مشروعك",contactText:"احكي لي عن فكرتك، وسنتواصل لترتيب الخطوة التالية.",contactInfoTitle:"تواصل مباشر",phoneLabel:"واتساب / اتصال",socialLabel:"تابعني",formName:"اسمك",formEmail:"بريدك الإلكتروني (اختياري)",formType:"نوع الخدمة",formChoose:"اختر الخدمة",formGraphic:"تصميم جرافيك",formWeb:"تصميم موقع",formBrand:"هوية بصرية",formOther:"أخرى",formMessage:"تفاصيل المشروع",formSubmit:"إرسال عبر واتساب",formNote:"سيتم فتح واتساب برسالة جاهزة بالمعلومات التي أدخلتها؛ لا يتم تخزين البيانات على هذا الموقع.",
+  footerText:"تصميم وتطوير",footerRights:"جميع الحقوق محفوظة.",notConfigured:"اكتب اسمك وتفاصيل المشروع أولًا."
+ },
+ en:{
+  navHome:"Home",navAbout:"About",navServices:"Services",navWork:"Portfolio",navContact:"Contact",
+  available:"Available for new projects",heroLine1:"I turn your ideas into",heroLine2:"memorable digital experiences.",heroText:"I'm Mohamed Emad, a graphic and web designer. I help brands build a strong visual identity and modern websites that balance beauty with usability.",
+  viewWork:"Explore my work",contactMe:"Let's talk",stat1:"Creative disciplines",stat2:"Detail-focused",stat3:"One goal: standout work",
+  servicesKicker:"What I do",servicesTitle:"Design that helps your brand stand out",servicesText:"From the first idea to the final detail, I focus on clear, consistent design that supports your goals.",
+  graphicTitle:"Graphic Design",graphicText:"Consistent visuals for social media, campaigns, and brand identity, tailored to your style.",
+  webTitle:"Web Design & Development",webText:"Responsive websites with clear user journeys and a polished look on desktop and mobile.",
+  brandTitle:"Visual Identity",brandText:"A cohesive visual system that makes your project recognizable across every touchpoint.",
+  workKicker:"Selected concepts",workTitle:"Ideas turned into design",workText:"Demo concepts showing the types of projects you can feature here. Replace them with your real work before publishing.",
+  project1:"Brand Identity",project1Text:"A visual concept for a modern brand with confident colors and clean details.",project2:"Creative Website UI",project2Text:"A dark web interface with clear contrast and interactive details.",project3:"Social Media Campaign",project3Text:"A coordinated set of promotional designs for a consistent digital presence.",
+  moreWork:"View all work",ctaTitle:"Have a project in mind?",ctaText:"Let's turn your idea into a polished experience that fits your brand.",startProject:"Start a project",
+  aboutKicker:"About me",aboutTitle:"Design-minded, detail-driven",aboutText:"I combine creative thinking with attention to detail to create visuals and websites that help businesses present themselves with confidence. Every project should be clear, engaging, and easy to use.",
+  aboutCardTitle:"Hey, I'm Mohamed Emad",aboutCardText:"Graphic Designer • Web Designer. I create visual identities and web interfaces that combine a modern look with practical function. This space is dedicated to my skills and process.",
+  skillsTitle:"My skills",skill1:"Graphic design",skill2:"Web design",skill3:"UI / UX",skill4:"Visual identity",processTitle:"My process",step1:"Understand",step1Text:"We define the goal, audience, and right direction.",step2:"Design & build",step2Text:"I turn the idea into a clear, consistent design.",step3:"Refine & deliver",step3Text:"We review the details and prepare the files or site for launch.",
+  servicesPageTitle:"My Services",servicesPageText:"Flexible design solutions to build a clear, distinctive digital presence.",serviceDetail1:"Social Media Design",serviceDetail1Text:"Posts, ads, and banners aligned with your brand identity.",serviceDetail2:"Logo Design",serviceDetail2Text:"Distinctive logos ready to work across different platforms.",serviceDetail3:"Personal & Business Websites",serviceDetail3Text:"Multi-page sites or landing pages with responsive layouts and comfortable UX.",serviceDetail4:"UI & UX Improvements",serviceDetail4Text:"Organizing content, sections, and buttons to make visitor journeys clearer.",
+  portfolioTitle:"Portfolio",portfolioText:"Explore creative directions that can be adapted to your project.",filterAll:"All",filterGraphic:"Graphic",filterWeb:"Web",contactTitle:"Let's start your project",contactText:"Tell me about your idea and we'll discuss the next step.",contactInfoTitle:"Get in touch",phoneLabel:"WhatsApp / Phone",socialLabel:"Follow me",formName:"Your name",formEmail:"Email (optional)",formType:"Service type",formChoose:"Choose a service",formGraphic:"Graphic design",formWeb:"Website design",formBrand:"Visual identity",formOther:"Other",formMessage:"Project details",formSubmit:"Send via WhatsApp",formNote:"WhatsApp will open with a prepared message based on your input; this website does not store form data.",
+  footerText:"Designed & built by",footerRights:"All rights reserved.",notConfigured:"Please enter your name and project details first."
+ }
+};
+const page = document.body.dataset.page || "home";
+let lang = "ar"; try { lang = localStorage.getItem("moo-lang") || "ar"; } catch (e) { lang = "ar"; }
+function applyLang(){
+ document.documentElement.lang=lang; document.documentElement.dir=lang==="ar"?"rtl":"ltr"; document.body.lang=lang;
+ document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(I18N[lang][key]) el.textContent=I18N[lang][key];});
+ document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{const key=el.dataset.i18nPlaceholder;if(I18N[lang][key])el.placeholder=I18N[lang][key];});
+ document.querySelectorAll(".lang-btn").forEach(b=>b.textContent=lang==="ar"?"EN":"عربي");
+ document.title=(lang==="ar"?"MOHAMED EMAAD | MOO":"MOHAMED EMAAD | MOO") + " — " + ({"home":lang==="ar"?"مصمم جرافيك ومواقع":"Graphic & Web Designer","about":I18N[lang].navAbout,"services":I18N[lang].navServices,"portfolio":I18N[lang].navWork,"contact":I18N[lang].navContact}[page]);
+}
+document.querySelectorAll(".lang-btn").forEach(b=>b.addEventListener("click",()=>{lang=lang==="ar"?"en":"ar";try{localStorage.setItem("moo-lang",lang);}catch(e){}applyLang();}));
+applyLang();
+const menuBtn=document.querySelector(".menu-btn"), nav=document.querySelector(".navlinks");
+if(menuBtn&&nav) menuBtn.addEventListener("click",()=>nav.classList.toggle("open"));
+document.querySelectorAll(".navlinks a").forEach(a=>{if(a.getAttribute("href")===location.pathname.split("/").pop() || (page==="home"&&a.getAttribute("href")==="index.html"))a.classList.add("active");a.addEventListener("click",()=>nav?.classList.remove("open"));});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+const filterButtons=document.querySelectorAll("[data-filter]");
+filterButtons.forEach(btn=>btn.addEventListener("click",()=>{filterButtons.forEach(b=>b.classList.remove("active"));btn.classList.add("active");document.querySelectorAll("[data-category]").forEach(card=>{card.hidden=btn.dataset.filter!=="all"&&card.dataset.category!==btn.dataset.filter;});}));
+const form=document.querySelector("#contact-form");
+if(form)form.addEventListener("submit",e=>{e.preventDefault();const data=new FormData(form);const name=(data.get("name")||"").trim();const details=(data.get("message")||"").trim();if(!name||!details){alert(I18N[lang].notConfigured);return;}const service=data.get("service")||"";const email=(data.get("email")||"").trim();const msg=lang==="ar"?`مرحبًا محمد، أنا ${name}.\nالخدمة المطلوبة: ${service}\nتفاصيل المشروع: ${details}${email?"\nالبريد الإلكتروني: "+email:""}`:`Hi Mohamed, I'm ${name}.\nService: ${service}\nProject details: ${details}${email?"\nEmail: "+email:""}`;window.open("https://wa.me/201039674934?text="+encodeURIComponent(msg),"_blank","noopener");});
+
+
+const showProjectFormBtn=document.querySelector("#show-project-form");
+const projectFormSection=document.querySelector("#project-form-section");
+if(showProjectFormBtn&&projectFormSection) showProjectFormBtn.addEventListener("click",()=>{
+ projectFormSection.hidden=false;
+ projectFormSection.scrollIntoView({behavior:"smooth",block:"start"});
+});
+const projectBriefForm=document.querySelector("#project-brief-form");
+if(projectBriefForm) projectBriefForm.addEventListener("submit",e=>{
+ e.preventDefault();
+ const d=new FormData(projectBriefForm);
+ const name=(d.get("clientName")||"").trim();
+ const phone=(d.get("clientPhone")||"").trim();
+ const type=(d.get("projectType")||"").trim();
+ const details=(d.get("projectDetails")||"").trim();
+ if(!name||!phone||!type||!details){alert("من فضلك اكتب كل البيانات المطلوبة.");return;}
+ const message=`طلب مشروع جديد\nالاسم: ${name}\nرقم الموبايل: ${phone}\nنوع المشروع: ${type}\nتفاصيل المشروع: ${details}`;
+ window.open("https://wa.me/201142460251?text="+encodeURIComponent(message),"_blank","noopener");
+});
+const testimonialItems=[
+ ["بجد شكرًا للمهندس على شغله وتصميماته الجميلة، ما شاء الله تسلم إيدك.","محمود علي","القاهرة"],
+ ["التصميم طلع منظم وجميل، والتعامل كان محترم جدًا.","أحمد محمد","الجيزة"],
+ ["فكرة اللوجو اتنفذت بشكل احترافي وألوانه مناسبة للمشروع.","يوسف خالد","المنيا"],
+ ["الموقع شكله عصري وسهل الاستخدام، شغل ممتاز.","عمر حسن","الإسكندرية"],
+ ["التفاصيل والألوان متناسقة جدًا، بالتوفيق دايمًا.","سيف إبراهيم","القاهرة"],
+ ["التصميمات مناسبة لهوية المشروع ووصلت الفكرة بشكل واضح.","كريم مصطفى","الجيزة"],
+ ["شغل جميل واهتمام بالتفاصيل، شكرًا على المجهود.","عبد الرحمن علي","المنيا"],
+ ["واجهة الموقع مرتبة وسريعة على الموبايل، تسلم إيدك.","مروان أحمد","أسيوط"],
+ ["التعامل كان سهل والتصميم النهائي شكله مميز.","حسن محمود","طنطا"],
+ ["ما شاء الله تصميم احترافي وأفكار جميلة، ربنا يوفقك.","زياد سمير","المنصورة"]
+];
+let testimonialIndex=0;
+function showTestimonial(){
+ const item=testimonialItems[testimonialIndex];
+ const t=document.getElementById("testimonial-text"), n=document.getElementById("testimonial-name"), l=document.getElementById("testimonial-location");
+ if(t&&n&&l){t.textContent=item[0];n.textContent=item[1];l.textContent=item[2];}
+ testimonialIndex=(testimonialIndex+1)%testimonialItems.length;
+}
+if(document.getElementById("testimonial-card")) setInterval(showTestimonial,5000);
+
+</script>
+
+<script>
+(function () {
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('moo-theme'); } catch (e) {}
+  let theme = savedTheme === 'light' ? 'light' : 'dark';
+
+  function applyTheme() {
+    root.setAttribute('data-theme', theme);
+    const isLight = theme === 'light';
+    toggle.textContent = isLight ? '🌙' : '☀️';
+    toggle.setAttribute('aria-label', isLight ? 'تفعيل الوضع الليلي' : 'تفعيل الوضع النهاري');
+    toggle.setAttribute('title', isLight ? 'تفعيل الوضع الليلي' : 'تفعيل الوضع النهاري');
+  }
+
+  toggle.addEventListener('click', function () {
+    theme = theme === 'dark' ? 'light' : 'dark';
+    applyTheme();
+    try { localStorage.setItem('moo-theme', theme); } catch (e) {}
+  });
+
+  applyTheme();
+})();
+</script>
+
+</body></html>
